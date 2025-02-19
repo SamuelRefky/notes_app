@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/const.dart';
+import 'package:notes_app/widgets/custom_appbar.dart';
+import 'package:notes_app/widgets/note_card.dart';
 
 class NotesView extends StatefulWidget {
   const NotesView({super.key});
@@ -14,19 +16,11 @@ class _NotesViewState extends State<NotesView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kColor,
-      appBar: AppBar(
-        backgroundColor: kColor,
-        title: Text(
-          'Notes',
-          style: TextStyle(fontSize: 40, color: Colors.grey),
+      body: Padding(
+        padding: const EdgeInsets.only(left: 24, right: 24, top: 50),
+        child: Column(
+          children: [CustomAppBar(), SizedBox(height: 20), NoteCard()],
         ),
-        actions: [
-          IconButton(
-            color: Color(0xff3D3D3D),
-            onPressed: () {},
-            icon: Icon(Icons.search, color: Colors.grey, size: 36),
-          ),
-        ],
       ),
     );
   }
