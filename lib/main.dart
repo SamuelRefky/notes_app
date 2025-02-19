@@ -10,6 +10,9 @@ class NotesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(routes: {HomePage.id: (context) => HomePage()});
+    return MaterialApp(
+      routes: {HomePage.id: (context) => HomePage()},
+      initialRoute: HomePage.id,
+    );
   }
 }
