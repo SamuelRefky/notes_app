@@ -11,7 +11,7 @@ class NoteCard extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            height: 220,
+            height: 200,
             width: double.infinity,
 
             decoration: BoxDecoration(
